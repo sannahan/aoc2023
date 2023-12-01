@@ -1,0 +1,16 @@
+# Importing required libraries
+import os
+import sys
+import re
+
+def main():
+    # Write your code here
+    sum = 0
+    with open("input") as file:
+        for row in file:
+            digits = re.sub("\D", "", row)
+            sum += int(digits[0] + digits[-1])
+    print(sum)
+
+if __name__ == "__main__":
+    main()
